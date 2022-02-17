@@ -8,6 +8,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.javainuse.exception.InvalidSalaryException;
+import com.javainuse.model.Employee;
 
 @Component
 public class RabbitMQConsumer {
@@ -16,22 +17,17 @@ public class RabbitMQConsumer {
     private RabbitTemplate rabbitTemplate;
        
 	@RabbitListener(queues = "javainuse.queue")
-	public void recievedMessage(Message message) throws InvalidSalaryException {
+	public void recievedMessage(Employee employee, Message message) throws InvalidSalaryException {
 		
 		if(hasExceededRetry(message)) {
-			final List<Map<String,?>> xDeathHeader = message.getMessageProperties().getXDeathHeader();
-			System.out.println(xDeathHeader);
+			this.rabbitTemplate.send("deadLetterExchange","parkingLotKey",message);
 			return;
 		}
      
-		if (1==1) {
-			this.rabbitTemplate.send("deadLetterExchange","parkingLotKey",message);
+		if (employee.getSalary() == 10) {
 			throw new InvalidSalaryException();
 		}
 		
-		System.out.println(message);
-
-
 	}
 	
 	private boolean hasExceededRetry(Message message) {
