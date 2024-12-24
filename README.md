@@ -11,6 +11,9 @@ Após as tentativas de reprocessamento, se a operação não for bem-sucedida, u
 
 No nosso caso, a fila foi chamada de consulta-emprestimo-parking-lot, o que sugere que as operações que falharam, após todas as tentativas de reprocessamento, serão "estacionadas" temporariamente nesta fila para uma análise futura.
 
+![image](https://github.com/user-attachments/assets/59770b32-dc9b-47d7-a6ff-ae718ba06ba2)
+
+
 ---
 
 # Como Executar uma Aplicação Java 21 com Maven
