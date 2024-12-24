@@ -1,0 +1,5 @@
+com\consulta\emprestimo\config\RabbitMQConfig.class
+com\consulta\emprestimo\service\RabbitMQConsumer.class
+com\consulta\emprestimo\exception\InvalidSalaryException.class
+com\consulta\emprestimo\model\Employee.class
+com\consulta\emprestimo\SpringBootConsumerApplication.class
