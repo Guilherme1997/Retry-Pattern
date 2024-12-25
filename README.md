@@ -13,6 +13,12 @@ No nosso caso, a fila foi chamada de consulta-emprestimo-parking-lot, o que suge
 
 ![image](https://github.com/user-attachments/assets/59770b32-dc9b-47d7-a6ff-ae718ba06ba2)
 
+---
+## Tecnologias Utilizadas
+
+- **RabbitMQ**: Sistema de gerenciamento de filas de mensagens utilizado para comunicação assíncrona entre microserviços.
+- **Java 21**: A versão mais recente do Java, utilizada para o desenvolvimento do backend.
+- **Spring Boot**: Framework Java utilizado para simplificar o desenvolvimento de aplicações baseadas em Spring.
 
 ---
 
