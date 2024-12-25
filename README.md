@@ -5,7 +5,7 @@ Tentativas: Você configura o número de tentativas que a operação pode fazer 
 
 Intervalo entre tentativas: Após cada falha, o padrão pode ter um intervalo entre as tentativas. Esse intervalo pode ser fixo, progressivo (aumentando a cada tentativa) ou aleatório.
 
-Timeout (Tempo de Execução Máximo): A operação tem um tempo máximo para ser executada, após o qual é interrompida. No nosso caso,  um Time To Live (TTL) de 10.000 segundos.
+Timeout (Tempo de Execução Máximo): A operação tem um tempo máximo para ser executada, após o qual é interrompida. No nosso caso,  um Time To Live (TTL) de 10 segundos.
 
 Após as tentativas de reprocessamento, se a operação não for bem-sucedida, um dos padrões que estamos adotando é encaminhar a solicitação para uma fila de análise para um processamento posterior. Esse é um comportamento comum em sistemas distribuídos para garantir que as operações não sejam perdidas, permitindo uma análise detalhada e um novo tratamento em outro momento.
 
