@@ -22,10 +22,6 @@ No nosso caso, a fila foi chamada de consulta-emprestimo-parking-lot, o que suge
 
 ---
 
-# Como Executar uma Aplicação Java 21 com Maven
-
-Este guia explica como executar uma aplicação Java 21 utilizando o Maven, desde a configuração até a execução do projeto.
-
 ## Pré-requisitos
 
 Antes de começar, certifique-se de que você tem as seguintes ferramentas instaladas:
