@@ -15,7 +15,7 @@ No nosso caso, a fila foi chamada de consulta-emprestimo-parking-lot, o que suge
 
 Estou implementando um design pattern em Java utilizando o padrão de retry. O fluxo de mensagens começa quando uma mensagem é postada na fila consulta.emprestimo.queue. Caso o microserviço que a processa encontre um erro simulado, a mensagem é movida para a fila consulta.emprestimo.dead.letter.queue, onde ficará armazenada por 10.000 milissegundos (10 segundos). Após esse período, a mensagem será reprocessada.
 
-Esse processo de reprocessamento será tentado por até 3 vezes. Se, após essas 3 tentativas, a mensagem ainda não for processada com sucesso, ela será movida para a fila consulta.emprestimo.parking.lot para uma análise mais aprofundada.
+Esse  reprocessamento ocorrerá por até 3 vezes. Se, após essas 3 tentativas, a mensagem ainda não for processada com sucesso, ela será movida para a fila consulta.emprestimo.parking.lot para uma análise mais aprofundada.
 
 Essa abordagem permite uma gestão eficiente de falhas temporárias, evitando sobrecarga no sistema e garantindo que mensagens com problemas sejam tratadas adequadamente sem causar impactos no fluxo principal.
 
