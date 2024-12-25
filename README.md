@@ -17,7 +17,7 @@ No nosso caso, a fila foi chamada de consulta-emprestimo-parking-lot, o que suge
 ## Tecnologias Utilizadas
 
 - **RabbitMQ**: Sistema de gerenciamento de filas de mensagens utilizado para comunicação assíncrona entre microserviços.
-- **Java 21**: A versão mais recente do Java, utilizada para o desenvolvimento do backend.
+- **Java 21**: A versão do Java, utilizada para o desenvolvimento do backend.
 - **Spring Boot**: Framework Java utilizado para simplificar o desenvolvimento de aplicações baseadas em Spring.
 
 ---
